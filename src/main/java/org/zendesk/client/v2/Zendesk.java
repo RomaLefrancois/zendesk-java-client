@@ -964,7 +964,7 @@ public class Zendesk implements Closeable {
             builder.addHeader("Authorization", "Bearer " + oauthToken);
         }
         builder.addQueryParameter("page", Integer.toString(page));
-        builder.setUrl(template.toString().replace("%2B", "+")); //replace out %2B with + due to API restriction
+        builder.setUrl(template.toString());
         return builder.build();
     }
 
